@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.project.storage.boxinfo.mapper.BoxinfoMapper">
+    <insert id="add">
+insert into t_box_info (box_code,box_standard,box_unit_price,used_by,is_used,remark,sort_no, create_time, create_by, update_time,update_by, version, del_flag)
+value (#{boxCode},#{boxStandard},#{boxUnitPrice},#{usedBy},#{isUsed},#{remark},#{sortNo},#{createTime},#{createBy},#{updateTime},#{updateBy},#{version},#{delFlag})
+
+    </insert>
+    <delete id="delete" >
+        delete from t_box_info where id=#{id}
+    </delete>
+
+    <select id="queryALL" resultType="com.neusoft.project.storage.boxinfo.domain.Boxinfo">
+        select * from  t_box_info
+    </select>
+    <select id="querylist" resultType="com.neusoft.project.storage.boxinfo.domain.Boxinfo"></select>
+</mapper>

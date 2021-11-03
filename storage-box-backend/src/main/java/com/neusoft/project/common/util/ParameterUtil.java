@@ -2,8 +2,10 @@ package com.neusoft.project.common.util;
 
 import com.neusoft.common.utils.DateUtils;
 import com.neusoft.common.utils.SecurityUtils;
+import com.neusoft.framework.security.LoginUser;
 import com.neusoft.framework.web.domain.BaseEntity;
 import com.neusoft.project.common.enums.TerminalEnum;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
